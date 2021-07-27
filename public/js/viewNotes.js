@@ -25,7 +25,7 @@ const renderDataAsHtml = (data) => {
     const note = data[noteItem]
     cards += createCard(note)
   }
-  document.querySelector("#app").innerHTML = cards
+  document.querySelector("#app").insertAdjacentHTML("beforeEnd", cards)
 }
 
 const createCard = (note) => {
