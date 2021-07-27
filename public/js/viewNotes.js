@@ -29,9 +29,11 @@ const renderDataAsHtml = (data) => {
 }
 
 const createCard = (note) => {
+  const colors = ["primary", "link", "info", "success", "warning", "danger"]
+  let randomColor = colors[Math.floor(Math.random() * colors.length)]
   return `
     <div class="column is-one-quarter">
-      <div class="card">
+      <div class="card has-background-${randomColor}">
         <header class="header">
           <p class="card-header-title">${note.title}</p>
         </header>
